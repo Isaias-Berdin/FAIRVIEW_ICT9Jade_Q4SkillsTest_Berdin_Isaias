@@ -53,7 +53,7 @@
                 <label for="checkboxID" class="form-check-label">Stay logged in</label>
                 <br>
                 <br>
-                    <button type="submit" class="btn btn-dark text-light" onclick="login()">SUBMIT</button>
+                    <button type="button" id="loginstatus" class="btn btn-dark text-light" onclick="login()">SUBMIT</button>
                     <button type="reset" class="btn btn-dark text-light">RESET</button>
                 </div>
             </div>
@@ -73,21 +73,21 @@
                 case false:
                     break;
             }
-
-            let correctUsername = "isaiasberdin";
-            let correctPassword = "067894";
-
+        
+        do{
             if (!username || !password) {
                 alert("Please fill in both fields.");
                 return false;
             }
-             if (username === correctUsername && password === correctPassword) {
+             if (username === "isaiasiii" && password === "145") {
                 alert("Welcome, " + username + "!");
+                document.getElementById("loginstatus").innerHTML="";
+                window.location.href = "notebooks.html";
+                break
              } else {
                 alert("Incorrect username and/or password.");
              }
-
-             return false;
+        } while (false);
  
         }
     </script>
